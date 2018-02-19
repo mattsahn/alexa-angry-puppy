@@ -8,12 +8,16 @@ app = Flask(__name__)
 
 ask = Ask(app, "/")
 
-
 ## barks
+barks = "https://s3.amazonaws.com/angry-pup/barks_16000.mp3"
+growl = "https://s3.amazonaws.com/angry-pup/growl_16000.mp3"
+growl2 = "https://s3.amazonaws.com/angry-pup/growl2_16000.mp3"
 growl_bark = "https://s3.amazonaws.com/angry-pup/growl_bark_16000.mp3"
 bark_angry = "https://s3.amazonaws.com/angry-pup/angry_pup_16000.mp3"
 bark_angry2 = "https://s3.amazonaws.com/angry-pup/angry_pup2_16000.mp3"
+bark_angry3 = "https://s3.amazonaws.com/angry-pup/angry_pup3_16000.mp3"
 bark_once = "https://s3.amazonaws.com/angry-pup/single_bark_16000.mp3"
+bark_once2 = "https://s3.amazonaws.com/angry-pup/single_bark2_16000.mp3"
 bark_twice = "https://s3.amazonaws.com/angry-pup/bark_twice_16000.mp3"
 bark_twice2 = "https://s3.amazonaws.com/angry-pup/bark_twice2_16000.mp3"
 
@@ -22,25 +26,35 @@ bark_twice2 = "https://s3.amazonaws.com/angry-pup/bark_twice2_16000.mp3"
 def welome():
     return question("What do you want your pup to do?")
 
-@ask.intent("AngryPup")
+@ask.intent("Bark")
+def Bark():
+    print("Intent: Bark")
+    return question("<speak><audio src='" + barks + "'/> </speak>").reprompt("<speak><audio src='" + bark_twice2 + "'/> </speak>")
 
-def angry_pup():
-    return question("<speak><audio src='" + bark_angry + "'/> </speak>").reprompt("<speak><audio src='" + growl_bark + "'/> </speak>")
+@ask.intent("Growl")
+def Growl():
+    print("Intent: Growl")
+    return question("<speak><audio src='" + growl + "'/> </speak>").reprompt("<speak><audio src='" + growl2 + "'/> </speak>")
+    
+@ask.intent("AngryPup")
+def AngryPup():
+    print("Intent: AngryPup")
+    return question("<speak><audio src='" + bark_angry3 + "'/> </speak>").reprompt("<speak><audio src='" + growl_bark + "'/> </speak>")
 
 @ask.intent("BarkOnce")
-
 def BarkOnce():
-    return question("<speak><audio src='" + bark_once + "'/> </speak>").reprompt("<speak><audio src='" + bark_twice + "'/> </speak>")
+    print("Intent: BarkOnce")
+    return question("<speak><audio src='" + bark_once + "'/> </speak>").reprompt("<speak><audio src='" + bark_once2 + "'/> </speak>")
 
 @ask.intent("BarkTwice")
-
 def BarkTwice():
+    print("Intent: BarkTwice")
     return question("<speak><audio src='" + bark_twice2 + "'/> </speak>").reprompt("<speak><audio src='" + growl_bark + "'/> </speak>")
     
 @ask.intent("GrowlBark")
-
 def GrowlBark():
-    return question("<speak><audio src='" + growl_bark + "'/> </speak>").reprompt("<speak><audio src='" + bark_angry2 + "'/> </speak>")
+    print("Intent: GrowlBark")
+    return question("<speak><audio src='" + growl_bark + "'/> </speak>").reprompt("<speak><audio src='" + bark_once2 + "'/> </speak>")
     
 
 ## Amazon built-in intents

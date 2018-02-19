@@ -20,6 +20,12 @@
     },
     {
       "intent": "GrowlBark"
+    },
+    {
+      "intent": "Growl"
+    },
+    {
+      "intent": "Bark"
     }
   ]
 }
