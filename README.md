@@ -27,3 +27,5 @@ zappa prod update
 # lambda URL - created by zappa
 https://uqk9dp54p4.execute-api.us-east-1.amazonaws.com/prod
 
+# generate requirements.txt
+pipreqs ~/workspace/ --ignore .venv --force
