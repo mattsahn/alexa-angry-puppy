@@ -4,9 +4,15 @@ AngryPup get angry
 AngryPup to get mad
 BarkOnce bark once
 BarkOnce bark one time
+BarkOnce woof
+BarkOnce rough
+BarkOnce ruff
 BarkTwice bark twice
 BarkTwice bark two times
 BarkTwice twice
+BarkTwice woof woof
+BarkTwice rough rough
+BarkTwice ruff ruff
 GrowlBark growl and bark
 GrowlBark bark and growl
 Growl growl
@@ -14,6 +20,5 @@ Growl grr
 Growl are
 Growl argh
 Bark bark
-Bark woof
-Bark rough
-Bark ruff
+Bark bark a lot
+Bark keep barking
