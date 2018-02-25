@@ -26,6 +26,9 @@
     },
     {
       "intent": "Bark"
+    },
+    {
+      "intent": "Cry"
     }
   ]
 }

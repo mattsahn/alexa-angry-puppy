@@ -15,6 +15,9 @@ source .venv/bin/activate
 # run app
 python app.python
 
+# wget mp3 files
+wget https://s3.amazonaws.com/angry-pup/cry3.mp3
+
 # encode into ALexa mp3 format and double volume
 ffmpeg-3.4.2-32bit-static/ffmpeg -y -i bark_twice2.mp3 -ar 16000 -ab 48k -codec:a libmp3lame -ac 1 -filter:a "volume=2"  files/bark_twice2_16000.mp3
 

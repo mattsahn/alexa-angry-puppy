@@ -15,6 +15,12 @@ BarkTwice rough rough
 BarkTwice ruff ruff
 GrowlBark growl and bark
 GrowlBark bark and growl
+GrowlBark ruff grr
+GrowlBark grr woof
+GrowlBark argh rough
+GrowlBark grr rough
+GrowlBark woof argh
+GrowlBark rough argh
 Growl growl
 Growl grr
 Growl are
@@ -22,3 +28,11 @@ Growl argh
 Bark bark
 Bark bark a lot
 Bark keep barking
+AMAZON.StopIntent Be quiet
+AMAZON.StopIntent quiet
+AMAZON.StopIntent Shut up
+AMAZON.StopIntent shh
+Cry cry
+Cry whimper
+Cry be sad
+Cry complain
